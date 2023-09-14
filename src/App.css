@@ -66,6 +66,7 @@ h3.num {
   padding: 7px;
   border-radius: 5px;
   color: hsl(219, 14%, 63%);
+  margin-top: 1rem;
 }
 .avatar img {
   height: 50px;
@@ -89,7 +90,10 @@ span.dot {
     gap: 5px;
   }
   .single-box {
-    padding: 0;
+    padding: 1rem;
     gap: 5px;
+  }
+  .notifications{
+    gap: 0;
   }
 }

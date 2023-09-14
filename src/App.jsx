@@ -1,16 +1,16 @@
 import "./App.css";
-import markwebber from "../public/avatar-mark-webber.webp";
-import angela from "../public/avatar-angela-gray.webp";
-import jacob from "../public/avatar-jacob-thompson.webp";
-import rizky from "../public/avatar-rizky-hasanuddin.webp";
-import kimberly from "../public/avatar-kimberly-smith.webp";
-import nathan from "../public/avatar-nathan-peterson.webp";
-import anna from "../public/avatar-anna-kim.webp";
-import myPic from "../public/image-chess.webp";
+import markwebber from "./assets/avatar-mark-webber.webp";
+import angela from "./assets/avatar-angela-gray.webp";
+import jacob from "./assets/avatar-jacob-thompson.webp";
+import rizky from "./assets/avatar-rizky-hasanuddin.webp";
+import kimberly from "./assets/avatar-kimberly-smith.webp";
+import nathan from "./assets/avatar-nathan-peterson.webp";
+import anna from "./assets/avatar-anna-kim.webp";
+import myPic from "./assets/image-chess.webp";
 
 function App() {
   return (
-    <body>
+    <>
       <div className="top-bar">
         <div className="title">
           <h2 className="title-text">Notifications</h2>
@@ -192,7 +192,7 @@ function App() {
         </a>
         . Coded by <a href="https://github.com/Erick384">Erick-384</a>.
       </div>
-    </body>
+    </>
   );
 }
 
