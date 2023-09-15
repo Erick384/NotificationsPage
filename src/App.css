@@ -60,6 +60,7 @@ h3.num {
 }
 .notifi-text{
   color: hsl(219, 12%, 42%);
+  /* display: flex; */
 }
 .private-text {
   border: 1px solid hsl(219, 14%, 63%);
@@ -73,9 +74,16 @@ h3.num {
   width: 50px;
   border-radius: 50%;
 }
+.box-text{
+  display: flex;
+  flex-direction: column;
+}
 span.dot {
-  height: 5px;
-  width: 5px;
+  height: 7px;
+  width: 7px;
+  margin: 10px;
+  display: flex;
+  /* border: 1px solid black; */
   background-color: hsl(1, 90%, 64%);
   border-radius: 50%;
 }

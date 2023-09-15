@@ -1,14 +1,17 @@
+import { useEffect } from "react";
 import "./App.css";
-import markwebber from "./assets/avatar-mark-webber.webp";
-import angela from "./assets/avatar-angela-gray.webp";
-import jacob from "./assets/avatar-jacob-thompson.webp";
-import rizky from "./assets/avatar-rizky-hasanuddin.webp";
-import kimberly from "./assets/avatar-kimberly-smith.webp";
-import nathan from "./assets/avatar-nathan-peterson.webp";
-import anna from "./assets/avatar-anna-kim.webp";
-import myPic from "./assets/image-chess.webp";
+import { getNotifications } from "./actions/notifications.actions";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [notifications,setNotifications] = useState(null)
+  const getdata = async () => {
+    const data = await getNotifications();
+    setNotifications(data)
+  };
+  useEffect(() => {
+    getdata();
+  }, []);
   return (
     <>
       <div className="top-bar">
@@ -25,9 +28,15 @@ function App() {
       <div className="notifications">
         {/* single notification starts */}
 
+
+    {
+      notifications.map((item)=>{
+        
+      })
+    }
         <div className="single-box unread">
           <div className="avatar">
-            <img src={markwebber} alt="Mark-Webber" />
+            <img src="/avatar-mark-webber.webp" alt="Mark-Webber" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -50,7 +59,7 @@ function App() {
 
         <div className="single-box">
           <div className="avatar">
-            <img src={angela} alt="Angela-Gray" />
+            <img src="/avatar-angela-gray.webp" alt="Angela-Gray" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -70,7 +79,7 @@ function App() {
 
         <div className="single-box">
           <div className="avatar">
-            <img src={jacob} alt="Jacob-Thompson" />
+            <img src="/avatar-jacob-thompson.webp" alt="Jacob-Thompson" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -93,7 +102,7 @@ function App() {
 
         <div className="single-box">
           <div className="avatar">
-            <img src={rizky} alt="Rizky" />
+            <img src="/avatar-rizky-hasanuddin.webp" alt="Rizky" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -118,7 +127,7 @@ function App() {
 
         <div className="single-box ">
           <div className="avatar">
-            <img src={kimberly} alt="Kimberly-Smith" />
+            <img src="/avatar-kimberly-smith.webp" alt="Kimberly-Smith" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -132,7 +141,7 @@ function App() {
           </div>
 
           <div className="left-img">
-            <img src={myPic} alt="myPic" />
+            <img src="/image-chess.webp" alt="myPic" />
           </div>
         </div>
 
@@ -142,7 +151,7 @@ function App() {
 
         <div className="single-box">
           <div className="avatar">
-            <img src={nathan} alt="Nathan-Peterson" />
+            <img src="/avatar-nathan-peterson.webp" alt="Nathan-Peterson" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -165,7 +174,7 @@ function App() {
 
         <div className="single-box">
           <div className="avatar">
-            <img src={anna} alt="Anna-Kim" />
+            <img src="/avatar-anna-kim.webp" alt="Anna-Kim" />
           </div>
           <div className="box-text">
             <p className="notifi-text">
@@ -194,6 +203,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
